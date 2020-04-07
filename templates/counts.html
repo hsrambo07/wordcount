@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'count' %}">
+        <textarea cols="40" rows="5" name="fulltext"></textarea>
+        
+        <br>
+        <textarea cols="40" rows="5" name="full"></textarea>
+        <br>
+        <input type="submit" value="Count">
+        <button style="border: solid 4px green;">Submit</button>
+
+    </form>
+
+
+    <h4>Your entered text: {{fulltext}}</h4>
+    <h4>The no. of {{full}} is: {{counts}}</h4>
+    
+    <p>Total words in your text are: {{count}}</p>
+    <a href="{% url 'home' %}">To start again</a>
+
+</body>
+</html>
